@@ -10,7 +10,7 @@ public class gatewayConfig {
 
     @Bean
     public RouteLocator buildRouteLocator(RouteLocatorBuilder builder){
-        System.out.println("Gate way passed");
-        return builder.routes().route(r -> r.path("/**").uri("https://finance-agent-yxjb.onrender.com")).build();
+        System.out.println("Gateway route configuration loaded successfully.");
+        return builder.routes().route("finance_backend_route",r -> r.path("/**").uri("https://finance-agent-yxjb.onrender.com")).build();
     }
 }
